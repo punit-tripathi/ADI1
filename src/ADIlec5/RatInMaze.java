@@ -1,3 +1,4 @@
+//g11
 package ADIlec5;
 
 import java.util.ArrayList;
@@ -33,16 +34,16 @@ public class RatInMaze {
         visited[sr][sc] =1;
 
         if(sc+1 < m && maze[sr][sc+1] == 1 && visited[sr][sc+1] == 0){
-            helper(maze,sr,sc+1,n,m,path + "R",res,visited);
+            helper(maze,sr,sc+1,n,m,res,path + "R",visited);
         }
         if(sc-1 >= 0 && maze[sr][sc-1] == 1 && visited[sr][sc-1] == 0){
-            helper(maze,sr,sc-1,n,m,path + "L",res,visited);
+            helper(maze,sr,sc-1,n,m,res,path + "L",visited);
         }
         if(sr+1 < n && maze[sr+1][sc] == 1 && visited[sr+1][sc] == 0){
-            helper(maze,sr+1,sc,n,m,path + "D",res,visited);
+            helper(maze,sr+1,sc,n,m,res,path + "D",visited);
         }
         if(sr-1 >= 0 && maze[sr-1][sc] == 1 && visited[sr-1][sc] == 0){
-            helper(maze,sr-1,sc,n,m,path + "U",res,visited);
+            helper(maze,sr-1,sc,n,m,res,path + "U",visited);
         }
         visited[sr][sc]=0;
 
